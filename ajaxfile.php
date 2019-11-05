@@ -40,3 +40,22 @@ if($request == 3){
 	echo "delete record";
 	exit;
 }
+
+
+
+//create user
+if($request == 4){
+
+	$username = $data->username;
+	$name = $data->name;
+	$email = $data->email;
+	$userData = mysqli_query($con,"SELECT * FROM users WHERE username='".$username."'");
+	if(mysqli_num_rows($userData) == 0){
+		mysqli_query($con,"INSERT INTO users(username,name,email) VALUES('".$username."','".$name."','".$email."')");
+		echo "Add record";
+	}else{
+		echo "Username already exists.";
+	}	 
+
+	exit;
+}

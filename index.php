@@ -29,7 +29,7 @@
 					<td><input type='text' v-model='username'></td>
 					<td><input type='text' v-model='name'></td>
 					<td><input type='text' v-model='email'></td>
-					<td><input type='button' value='Add' @click='addRecord();'></td>
+					<td><input type='button' value='Add' @click='createUser();'></td>
 				</tr>
 
 				<!-- Update/Delete -->

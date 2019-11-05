@@ -51,7 +51,35 @@ var app = new Vue({
             .catch(function (error) {
                 console.log(error);
             });
-        }
+        },
+        createUser:function(){
+            // Read value from Textbox
+         
+            axios.post('ajaxfile.php', {
+                request: 4,
+				username: this.username,
+				name: this.name,
+				email: this.email
+            })
+        
+            .then(function (response) {
+
+                // Fetch records
+                app.getAllUsers();
+
+                // Empty values
+                app.username = '';
+                app.name = '';
+                app.email = '';
+
+                alert(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        
+        },
+        
     },
     mounted: function () {
         console.log('Hello from Vue!')
