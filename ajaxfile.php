@@ -30,3 +30,13 @@ if($request == 2){
 	echo "Update record";
 	exit;
 }
+
+//delete user
+if($request == 3){
+
+	$id = $data->id;
+	mysqli_query($con,"DELETE FROM users WHERE id=".$id);
+		 
+	echo "delete record";
+	exit;
+}

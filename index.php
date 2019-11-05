@@ -38,7 +38,7 @@
 					<td><input type='text' v-model='user.name' ></td>
 					<td><input type='text' v-model='user.email' ></td>
 					<td><input type='button' value='Update' @click='updateUser(index,user.id);'>&nbsp;
-                    <input type='button' value='Delete' @click='deleteRecord(index,user.id)'></td>
+                    <input type='button' value='Delete' @click='deleteUser(index,user.id)'></td>
 				</tr>
 			</table>
 			
